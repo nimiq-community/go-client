@@ -12,13 +12,14 @@
 
 ## Installation
 
-*Placeholder; how to add this client to a proect.*
+*Placeholder; how to add this client to a project.*
 
-## Contribute
+## Contributions
 
 This implementation was originally contributed by [*Placeholder; Your name with link to GitHub*](https://github.com/nimiq/).
-All future contributions are welcome as pull request.
-Please refer to the issue tracker for ideas.
+
+Please send your contributions as pull requests.
+Refer to the [issue tracker](issues) for ideas.
 
 ## License
 
