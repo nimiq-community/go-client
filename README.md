@@ -12,7 +12,7 @@
 
 ## Installation
 
-*Placeholder; how to add this client to a project.*
+*Placeholder; how to add this client to a project. Each language comes with a package manager. To be useful for developers, add a package description file that works with the most commonly used package manager for this language. For example have a `package.json` file for JavaScript or `pom.xml` for Java.*
 
 ## Contributions
 
