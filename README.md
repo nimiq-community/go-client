@@ -1,26 +1,43 @@
-# Nimiq Go Client
+# Nimiq Go RPC Client
+[![Report card](https://goreportcard.com/badge/github.com/nimiq-community/go-client)](https://goreportcard.com/report/github.com/nimiq-community/go-client)
+[![GoDoc](https://godoc.org/github.com/nimiq-community/go-client?status.svg)](https://godoc.org/github.com/nimiq-community/go-client)
+
 
 > Go implementation of the Nimiq RPC client specs.
 
-## Usage
+## About
+A Nimiq RPC client library in Go. This client library implements the [Nimiq RPC specification](https://github.com/nimiq/core-js/wiki/JSON-RPC-API#remotejs-client). This client uses the jsonrpc library to handle JSON-RPC 2.0 requests and responses. For more information about this library see the [jsonrpc documentation](https://godoc.org/github.com/ybbus/jsonrpc)
 
-*Placeholder; Rather than starting to delve into the API docs, it'd be great to see what the client looks like in action in this lang plus a rough description what it does. The dev should be able to quickly determine whether the example fits the desired style and problem.*
+### Usage
+This library is fully Go module compatible. See the full documentation on [GoDoc](https://godoc.org/github.com/nimiq-community/go-Client)
+An example of using this library can be found below:
 
-## API
+```
+client := nimiqrpc.NewClient("address.to.nimiqnode.com")
+balance, _ := client.GetBalance("NQ52 V4BF 52J3 0PM6 BG4M 9QY1 RUYS UAL6 CJD2")
+fmt.Println("Balance: ", balance)
+```
 
-*Placeholder; All the implemented methods with parameters, types, default values, return types*
+## Testing
+This library provides several tests to guarantee API consistency. Several tests require an RPC server to test the RPC requests. In order to run theses tests, arguments need to be provided to the go test command. The following arguments are supported:
 
-## Installation
+* <b>node-addr</b> <i>[address]</i> Sets the address of the Nimiq RPC server
+* <b>auth</b> Enables the use of authentication to the RPC server
+* <b>username</b> <i>[username]</i> Sets the username of the client
+* <b>password</b> <i>[password]</i> Sets the password of the client
 
-*Placeholder; how to add this client to a project. Each language comes with a package manager. To be useful for developers, add a package description file that works with the most commonly used package manager for this language. For example have a `package.json` file for JavaScript or `pom.xml` for Java.*
+For example:
+```
+go test --cover --node-addr "http://seed.nimiq.example:8443" --auth --username "username"  --password "this is an example password: the higher the entropy the better the password"
+```
 
 ## Contributions
 
-This implementation was originally contributed by [*Placeholder; Your name with link to GitHub*](https://github.com/nimiq/).
+This implementation was originally contributed by [redmaner](https://github.com/redmaner/).
 
 Please send your contributions as pull requests.
 Refer to the [issue tracker](issues) for ideas.
 
 ## License
 
-[Apache 2.0](LICENSE.md)
+[Apache 2.0](LICENSE)
