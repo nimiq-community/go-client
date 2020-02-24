@@ -85,7 +85,7 @@ func (nc *Client) Call(method string, params interface{}) (*jsonrpc.RPCResponse,
 // Returns jsonrpc.RPCResponses that is of type []*jsonrpc.RPCResponse
 // - note that a list of RPCResponses can be received unordered so it can happen that: responses[i] != responses[i].ID
 // - RPCPersponses is enriched with helper functions e.g.: responses.HasError() returns  true if one of the responses holds an RPCError
-// Please see the documenation on how to handle jsonrpc.RPCResonses: https://godoc.org/github.com/ybbus/jsonrpc#RPCResponses
+// Please see the documentation on how to handle jsonrpc.RPCResonses: https://godoc.org/github.com/ybbus/jsonrpc#RPCResponses
 func (nc *Client) CallBatch(reqs ...*jsonrpc.RPCRequest) (jsonrpc.RPCResponses, error) {
 	return nc.rpcClient.CallBatch(jsonrpc.RPCRequests(reqs))
 }
