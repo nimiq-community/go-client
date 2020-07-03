@@ -148,7 +148,7 @@ func (nc *Client) GetBlockByHash(blockHash string, fullTransactions bool) (block
 	}
 
 	if result.Hash == "" {
-		return nil, nil
+		return nil, ErrResultUnexpected
 	}
 
 	// Transaction result
@@ -184,7 +184,7 @@ func (nc *Client) GetBlockByNumber(blockNumber int, fullTransactions bool) (bloc
 	}
 
 	if result.Hash == "" {
-		return nil, nil
+		return nil, ErrResultUnexpected
 	}
 
 	// Transaction result
