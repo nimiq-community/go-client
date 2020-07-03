@@ -133,7 +133,7 @@ func (nc *Client) GetBalance(address string) (balance Luna, err error) {
 // If fullTransactions is true it returns a block with the full transaction objects,
 // if false only the hashes of the transactions will be returned.
 func (nc *Client) GetBlockByHash(blockHash string, fullTransactions bool) (block *Block, err error) {
-	rpcResp, err := nc.Call("getBlockByNumber", []interface{}{
+	rpcResp, err := nc.Call("getBlockByHash", []interface{}{
 		blockHash, fullTransactions,
 	})
 	if err != nil {
