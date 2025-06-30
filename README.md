@@ -5,6 +5,11 @@
 
 > Go implementation of the Nimiq RPC client specs.
 
+This repository is archived: Nimiq PoS has been launched and this RPC client only supports the
+old PoW RPC specification. As of now, there is no Go RPC client implementation. Please
+[contact us](mailto:community@nimiq.com) if you are interested in implementing and supporting the
+Nimiq ecosystem for Go.
+
 ## About
 A Nimiq RPC client library in Go. This client library implements the [Nimiq RPC specification](https://github.com/nimiq/core-js/wiki/JSON-RPC-API#remotejs-client). This client uses the jsonrpc library to handle JSON-RPC 2.0 requests and responses. For more information about this library see the [jsonrpc documentation](https://godoc.org/github.com/ybbus/jsonrpc)
 
